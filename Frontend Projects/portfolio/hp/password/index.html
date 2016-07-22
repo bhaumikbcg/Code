@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Password</title>
+        <link rel="stylesheet" type="text/css" href="default.css" />
+        <link href="hexaflip.css" rel="stylesheet" type="text/css">
+        <link href="demo.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="container">
+            <header class="clearfix">
+                <h1>A Password can save your privacy<span>Rotate the cubes with the mouse. If you get a correct combination, you can proceed.</span></h1>
+                <nav class="codrops-demos">
+                    <a class="current-demo" id="hide" style="visibility:hidden" href="https://www.google.com/?gws_rd=ssl">Proceed</a>
+                </nav>
+            </header>
+            <div class="main">
+                <div id="hexaflip-demo5" class="demo"></div>
+                <div>
+                    <span id="submit">try password</span>
+                    <div id="output"></div>
+                </div>
+
+            </div>
+        </div>
+    <script src="hexaflip.js"></script>
+    <script>
+        var hexaDemo5,
+            set = [
+                {
+                    value: 'ten',
+                    style: {
+                        backgroundColor: '#e67e22'
+                    }
+                },
+                {
+                    value: 'G',
+                    style: {
+                        backgroundColor: '#1ABC9C'
+                    }
+                },
+                {
+                    value: 'two',
+                    style: {
+                        backgroundColor: '#f1c40f'
+                    }
+                },
+                {
+                    value: 'one',
+                    style: {
+                        backgroundColor: '#2ECC71'
+                    }
+                },
+                {
+                    value: 'O',
+                    style: {
+                        backgroundColor: '#3498DB'
+                    }
+                },
+                {
+                    value: 'nine',
+                    style: {
+                        backgroundColor: '#E74C3C'
+                    }
+                },
+                {
+                    value: 'D',
+                    style: {
+                        backgroundColor: '#9B59B6'
+                    }
+                },
+                {
+                    value: 'O',
+                    style: {
+                        backgroundColor: '#BDC3C7'
+                    }
+                }
+            ];
+        document.addEventListener('DOMContentLoaded', function(){
+            var submit = document.getElementById('submit'),
+                output = document.getElementById('output');
+            hexaDemo5 = new HexaFlip(document.getElementById('hexaflip-demo5'),
+                {set1: set, set2: set, set3: set, set4: set},
+                {fontSize: 50, margin: 4, perspective: 1000}
+            );
+            submit.addEventListener('click', function(){
+                if(hexaDemo5.getValue().join(' ') === 'nine one ten two'){
+                    output.innerHTML = 'password correct!';
+					
+                    hexaDemo5.flip();
+                    hexaDemo5.flip();
+                    hexaDemo5.flip();
+                    hexaDemo5.flip();
+                   document.getElementById('hide').style.visibility = 'visible';
+                }else{
+                    output.innerHTML = 'password incorrect.';
+                }
+            }, false);
+        }, false);
+
+    </script>
+    </body>
+</html>

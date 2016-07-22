@@ -1,0 +1,498 @@
+<?php
+session_start();
+?>
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Review</title>
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	
+</head>
+<body class="inner-page">
+<?php
+$profile = $_SESSION["username"];
+//$profile = $_POST["email"];
+?>
+	<header class="nav-head-bkgd">
+		<div class="red-bar text-right">
+		
+			<section class="container">
+				<span class="login"><a href="#" data-toggle="modal" data-target="#myModal">Login</a> | <a href="#" data-toggle="modal" data-target="#myModal2">Signin</a></span>
+				<div class="btn-group margin-left20">
+					<button class="btn btn-primary btn-xs browse-button" type="button" data-toggle="modal" data-target="#myModal3"><span class="glyphicon glyphicon-search"></span>
+					Browse
+					</button>	
+				</div>
+			</section> 
+		</div>
+		
+		<div id="myModal3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+			<div class="modal-dialog modal-pos">
+				<div class="modal-content abs">
+
+					
+					<div class="modal-body">
+						<form action="form">
+							<div class="form-group">
+								<label for="exampleInputName">Varietals</label>
+									<select class="form-control">
+										<option>Cabernet Sauvignon</option>
+										<option>Chardonnay</option>
+										<option>Merlot</option>
+									</select>
+								
+							</div>
+							
+							<div class="form-group">
+								<label for="exampleInputEmail1">Price</label>
+								<select class="form-control">
+									<option>$5 to $50</option>
+									<option>$51 to $100</option>
+									<option>$101 to $150</option>
+									<option>$151 to $200</option>
+									<option>$201 to $250</option>
+							</select>
+							</div>
+				
+							
+							<div class="form-group">
+								<label for="exampleInputPhone">Distance</label>
+								<select class="form-control">
+									<option>0miles to 10miles</option>
+									<option>11miles to 20miles</option>
+									<option>21miles to 30miles</option>
+									<option>31miles to 40miles</option>
+									<option>41miles to 50miles</option>
+									<option>51miles and more</option>
+								</select>
+							</div>
+							
+							<div class="form-group">
+								<ul class="list-inline">
+								<li class="deals"><label for="exampleInputPhone">Deal</label></li>
+									
+									<li><div class="radio">
+										<label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="yes">Yes</label>
+									</div></li>
+									<li><div class="radio">
+										<label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">No</label>
+									</div></li>
+								</ul>
+							</div>
+							
+							<div class="form-group">
+								<ul class="list-inline">
+								<li class="deals"><label for="exampleInputPhone">Wine</label></li>
+									
+									<li><div class="radio">
+										<label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">Yes</label>
+									</div></li>
+									<li><div class="radio">
+										<label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">No</label>
+									</div></li>
+								</ul>
+							</div>
+							
+							<div class="form-group">
+							<label class="pull-left margin-right20" for="">Size</label>
+							<div class="btn-group size-button">
+								<button type="button" class="btn btn-default">small</button>
+								<button type="button" class="btn btn-default">medium</button>
+								<button type="button" class="btn btn-default">large</button>
+							</div>
+							</div>
+
+						</form>
+					</div>
+					<div class="modal-footer no-border padding-top0">
+						<a class="btn-default btn pull-right" href="routes2.html" style="background-color:#B81C33; color:white;">Search</a>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		
+		<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+			<div class="modal-dialog modal-in-center">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+						<h4 class="modal-title" id="myModalLabel">Login</h4>
+					</div>
+					
+					<div class="modal-body">
+						<form role="form">
+							<div class="form-group">
+								<label for="exampleInputEmail1">Username</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Username">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">Password</label>
+								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+							</div>
+							<div class="form-group col-md-5 col-sm-5 col-xs-12">
+								<a href="#" class="help-block">Forgot Password?</a>
+							</div>
+							<div class="checkbox col-md-6 col-sm-6 col-xs-12">
+								<label>
+									<input type="checkbox"> Remember Me
+								</label>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer no-border padding-top0">
+						<button type="submit" class="btn btn-default">Submit</button>
+					</div>
+
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		
+		
+		
+		<div id="myModal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+			<div class="modal-dialog modal-in-center">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+						<h4 class="modal-title" id="myModalLabel">Sign In</h4>
+					</div>
+					<div class="modal-body">
+						<form role="form">
+							<div class="form-group">
+								<label for="exampleInputName">Name</label>
+								<input type="text" class="form-control" id="exampleInputName" placeholder="Enter Name">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputEmail1">Email Address</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPhone">Phone Number</label>
+								<input type="number" class="form-control" id="exampleInputPhone" placeholder="Phone Number">
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer no-border padding-top0">
+						<button type="submit" class="btn btn-default">Submit</button>
+					</div>
+
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		
+		
+	<nav class="top-navmenu navbar navbar-default col-md-12 logo_nav" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="toggle-button navbar-toggle nav_button collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar white"></span>
+            <span class="icon-bar white"></span>
+            <span class="icon-bar white"></span>
+          </button>
+          <div class="logo-holder col-sm-12 col-md-12 col-lg-12"><a class="navbar-brand" href="index.html" style="padding-top:0;">
+	<img src="imgs/yumvino-logo-mob.png" alt="yumvino logo" /></a>
+	</div>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: auto;">
+        <ul class=" nav navbar-nav navbar-right menu-to-right">
+            <li class="border-menu"><a href="review.html"><img src="imgs/review-icon.png" alt="review-icon" /><span class="menu-name-to-right">Review</span></a></li>
+			<li class="border-menu"><a href="profile.html"><img src="imgs/profile-icon.png" alt="profile-icon" /><span class="menu-name-to-right">Profile</span></a></li>
+			<li class="border-menu"><a href="maps.html"><img src="imgs/maps-icon.png" alt="maps-icon" /><span class="menu-name-to-right">Maps</span></a></li>
+			<li class="border-menu"><a href="deals.html"><img src="imgs/deals-icon.png" alt="deals-icon" /><span class="menu-name-to-right">Deals</span></a></li>
+			<li class="border-menu"><a href="routes1.html"><img src="imgs/routes-icon.png" alt="routes-icon" /><span class="menu-name-to-right">Routes</span></a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+	
+	<div class="red-border">
+	</div>
+		
+		<section class="container">
+		<form class="col-md-12 col-xs-12 col-sm-12 search" role="form">
+			<div class="search-bkgd input-group col-xs-12 col-sm-12 col-md-6 md-lg-5 pull-right">
+				<div class="col-lg-10 col-md-10 col-sm-10 pull-right">
+        <div class="input-group">
+          <input type="text" class="form-control">
+          <span class="input-group-btn">
+            <button class="main-search-btn btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+          </span>
+        </div><!-- /input-group -->
+      </div>
+	  
+	  <div class="btn-group col-md-12 col-xs-12 col-sm-12 visible-xs">
+				<button class="filter-drop btn btn-default btn-xs dropdown-toggle pull-right" type="button" data-toggle="dropdown">
+				FILTER BY <span class="caret"></span>
+				</button>
+				
+				<ul class="dropdown-menu pull-right" role="menu">
+					<li><a href="#">Location</a></li>
+					<li><a href="#">Taste</a></li>
+					<li><a href="#">Cost</a></li>
+					<li><a href="#">+ More Filters</a></li>
+				</ul>
+			</div>
+				<ul class="filterby pull-right hidden-xs">
+				<li>FILTER BY</li>
+				<li><a href="#">Location</a></li>
+				<li><a href="#">Taste</a></li>
+				<li><a href="#">Cost</a></li>
+				<li><a href="#">+ More Filters</a></li>
+			</ul>
+			</div>
+		</form>		
+			
+	</section>
+	</header>
+	
+	<div class="main-container">
+		<section class="container">
+					
+			<div class="col-md-5 col-xs-6 col-sm-7 pull-left padding-right0">
+				<h2 class="red-text margin-bottom0">Sonoma Wineries</h2>
+				<h4 class="red-text margin-top0">(Sonoma, US)</h4>
+				<p>7 Pancras Road, Sonoma County, California</p>
+			</div>
+			
+			<div class="bs-example col-md-7 col-sm-5 col-xs-6 margin-top10 padding-left0 padding-right0 pull-left">
+			
+				<div class="col-md-6 col-xs-6 col-sm-6 padding-right0 pull-left margin-tb5">
+					<span id="5" class="glyphicon glyphicon-star pull-right glyph-size"></span>
+					<span id="4" class="glyphicon glyphicon-star pull-right glyph-size"></span>
+					<span id="3" class="glyphicon glyphicon-star pull-right glyph-size"></span>
+					<span id="2" class="glyphicon glyphicon-star pull-right glyph-size"></span>
+					<span id="1" class="glyphicon glyphicon-star pull-right glyph-size"></span>
+				</div>
+				<div class="progress bar-height col-md-6 col-sm-6 col-xs-6 pull-right padding-left0">
+					<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+						<span class="sr-only">80% Complete (success)</span>
+					</div>
+				</div>
+				
+				<div class="col-md-6 col-xs-6 col-sm-6 padding-right0 pull-left margin-tb5">
+					<span id="4" class="glyphicon glyphicon-star pull-right glyph-size"></span>
+					<span id="3" class="glyphicon glyphicon-star pull-right glyph-size"></span>
+					<span id="2" class="glyphicon glyphicon-star pull-right glyph-size"></span>
+					<span id="1" class="glyphicon glyphicon-star pull-right glyph-size"></span>
+				</div>
+				<div class="progress bar-height col-md-6 col-sm-6 col-xs-6 pull-right padding-left0 ">
+					<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+					<span class="sr-only">60% Complete</span>
+					</div>
+				</div>
+				
+				<div class="col-md-6 col-xs-6 col-sm-6 padding-right0 pull-left margin-tb5">
+					<span id="3" class="glyphicon glyphicon-star pull-right glyph-size"></span>
+					<span id="2" class="glyphicon glyphicon-star pull-right glyph-size"></span>
+					<span id="1" class="glyphicon glyphicon-star pull-right glyph-size"></span>
+				</div>
+				<div class="progress bar-height col-md-6 col-sm-6 col-xs-6 pull-right padding-left0">
+					<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+					<span class="sr-only">90% Complete (warning)</span>
+					</div>
+				</div>
+				
+				<div class="col-md-6 col-xs-6 col-sm-6 padding-right0 pull-left margin-tb5">
+					<span id="2" class="glyphicon glyphicon-star pull-right glyph-size"></span>
+					<span id="1" class="glyphicon glyphicon-star pull-right glyph-size"></span>
+				</div>
+				<div class="progress bar-height col-md-6 col-sm-6 col-xs-6 pull-right padding-left0">
+					<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+					<span class="sr-only">20% Complete (danger)</span>
+					</div>
+				</div>
+				
+				<div class="col-md-6 col-xs-6 col-sm-6 padding-right0 pull-left margin-tb5">
+					<span id="1" class="glyphicon glyphicon-star pull-right glyph-size"></span>
+				</div>
+				<div class="progress bar-height col-md-6 col-sm-6 col-xs-6 pull-right padding-left0 margin-bottom0">
+					<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 7%">
+					<span class="sr-only">7% Complete (danger)</span>
+					</div>
+				</div>
+				<span class="pull-right margin-top10 margin-right30">Total Reviews: 758</span>
+			</div>
+			<div class=" col-md-12 col-sm-12 col-xs-12 margin-top10">
+				<a href="#" data-toggle="modal" data-target="#myModal4"><button type="button" class="btn btn-default navbar-btn main-search-btn"><span class="glyphicon glyphicon-pencil margin-right10"></span>Write a Review</button></a>
+				
+				<div class="btn-group col-md-6 col-xs-6 col-sm-6 pull-right padding-left0 padding-right0">
+					<button class="col-md-4 col-sm-4 btn btn-default btn-md dropdown-toggle pull-right" type="button" data-toggle="dropdown">
+					Sort By <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu pull-right" role="menu">
+						<li><a href="#">Popularity</a></li>
+						<li><a href="#">Rating</a></li>
+						<li><a href="#">Cost</a></li>
+					</ul>
+				</div>
+			</div>	
+		
+		
+		
+			<div id="myModal4" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+			<div class="modal-dialog modal-in-center modal-review">
+				<div class="modal-content">
+
+					<div class="modal-header padding-left30">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+						<h3 class="modal-title red-text" id="myModalLabel"><b>Write a Review</b></h3>
+					</div>
+					
+					<div class="modal-body">
+						<form role="form" method="post" action="review_insert.php">
+							<div class="form-group padding-lr10">
+								<label for="exampleInputEmail1" class=" red-text">Name of Winery</label>
+								<input type="text" class="form-control" id="exampleInputEmail1" name="winery">
+							</div>
+							<div class="form-group padding-lr10">
+								<label for="exampleInputPassword1" class=" red-text">Title of Review</label>
+								<input type="text" class="form-control" id="exampleInputPassword1" name="review">
+							</div>
+							<div class="register pull-left col-md-12 col-sm-12 col-xs-12">
+								<span class="col-md-4 col-sm-4 col-xs-4 red-text pull-left padding-left0 padding-right0">Quality of wine</span>
+								<div class="col-md-8 col-xs-8 col-sm-8 padding-right0 pull-left">
+									<span id="5" class="glyphicon glyphicon-star "></span>
+									<span id="4" class="glyphicon glyphicon-star "></span>
+									<span id="3" class="glyphicon glyphicon-star "></span>
+									<span id="2" class="glyphicon glyphicon-star "></span>
+									<span id="1" class="glyphicon glyphicon-star "></span>
+								</div>
+								<span class="col-md-4 col-sm-4 col-xs-4 red-text pull-left padding-left0 padding-right0">Value</span>
+								<div class="col-md-8 col-xs-8 col-sm-8 padding-right0 pull-left">
+									<span id="5" class="glyphicon glyphicon-star "></span>
+									<span id="4" class="glyphicon glyphicon-star "></span>
+									<span id="3" class="glyphicon glyphicon-star "></span>
+									<span id="2" class="glyphicon glyphicon-star "></span>
+									<span id="1" class="glyphicon glyphicon-star "></span>
+								</div>
+								<span class="col-md-4 col-sm-4 col-xs-4 red-text pull-left padding-left0 padding-right0">Atmosphere</span>
+								<div class="col-md-8 col-xs-8 col-sm-8 padding-right0 pull-left">
+									<span id="5" class="glyphicon glyphicon-star "></span>
+									<span id="4" class="glyphicon glyphicon-star "></span>
+									<span id="3" class="glyphicon glyphicon-star "></span>
+									<span id="2" class="glyphicon glyphicon-star "></span>
+									<span id="1" class="glyphicon glyphicon-star "></span>
+								</div>
+								<span class="col-md-4 col-sm-4 col-xs-4 red-text pull-left padding-left0 padding-right0">Amenities</span>
+								<div class="col-md-8 col-xs-8 col-sm-8 padding-right0 pull-left">
+									<span id="5" class="glyphicon glyphicon-star "></span>
+									<span id="4" class="glyphicon glyphicon-star "></span>
+									<span id="3" class="glyphicon glyphicon-star "></span>
+									<span id="2" class="glyphicon glyphicon-star "></span>
+									<span id="1" class="glyphicon glyphicon-star "></span>
+								</div>
+								<span class="col-md-4 col-sm-4 col-xs-4 red-text pull-left padding-left0 padding-right0">Overall</span>
+								<div class="col-md-8 col-xs-8 col-sm-8 padding-right0 pull-left">
+									<span id="5" class="glyphicon glyphicon-star "></span>
+									<span id="4" class="glyphicon glyphicon-star "></span>
+									<span id="3" class="glyphicon glyphicon-star "></span>
+									<span id="2" class="glyphicon glyphicon-star "></span>
+									<span id="1" class="glyphicon glyphicon-star "></span>
+								</div>
+							</div>
+							<div class="form-group padding-lr10">
+								<label for="exampleInputEmail1" class=" red-text">Comments</label>
+								<input type="text" class="form-control" id="exampleInputEmail1" name="comments">
+							</div>
+							<div class="form-group col-md-12 col-sm-12 col-xs-12 margin-bottom0">
+								<ul class="list-inline">
+								<li class="deals"><label for="exampleInputPhone">Would you recommend to a friend?</label></li>
+									<li><div class="radio">
+										<label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">Yes</label>
+									</div></li>
+									<li><div class="radio">
+										<label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">No</label>
+									</div></li>
+								</ul>
+							</div>
+							
+							<div class="register pull-left col-md-12 col-sm-12 col-xs-12 margin-left10">
+							<span class="glyphicon glyphicon-camera margin-right10"></span><span class="">Add a photo (optional)</span>
+							</div>
+							<button type="submit" class="btn btn-default margin-right30">Submit</button></br>
+						</form>
+					</div>
+					
+					<div class="modal-footer no-border padding-top0 ">
+						<p class="pull-left col-md-12 col-xs-12 col-sm-12 padding-left0 padding-right0 text-left margin-bottom0 margin-top10">By clicking submit I verify that I have visited the said winery and my comments are truthful.</p>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+			
+			
+			
+			
+			<div class="col-md-12 col-xs-12 pull-left padding-left0 padding-right0">
+					<ul class="review-list pull-left">
+					<?php
+					$con = mysqli_connect("mysql11.000webhost.com","a9308444_bhaumik","5248ebdh","a9308444_first");
+					$sql = "SELECT * FROM review";
+					$result = mysqli_query($con, $sql);
+					if($result==null){
+					print 'There are no comments at this moment.';}
+					else{
+						if (mysqli_num_rows($result) > 0) {
+						// output data of each row
+						while($row = mysqli_fetch_assoc($result)) {
+						?>
+						<?php
+						print '<li class="col-md-1 col-sm-1 col-xs-2 padding-left0 padding-right0"><img src="'.$profile.'/me1.jpg" alt="reviewer\'s picture" /></li>';
+						?>
+						<li class="col-md-11 col-sm-11 col-xs-10 padding-left0 padding-right0">
+							<h4 class="margin-bottom0 red-text col-md-7 col-sm-7 col-xs-7 padding-left0 padding-right0"><?php print $row["winery"];?></h4>
+							<span class="pull-right col-md-5 col-sm-5 col-xs-5 text-right padding-left0 padding-right0">Mar 10, 2016</span>
+							<h5 class="red-text margin-top0 col-md-7 col-sm-7 col-xs-7 padding-left0 padding-right0">(CA, US)</h5>
+							<div class=" col-md-5 col-sm-5 col-xs-5 description-right rating margin-top0 padding-left0 padding-right0">
+							<span class="pull-right">3.5</span>
+									<span id="5" class="red-text glyphicon glyphicon-star pull-right glyph-size"></span>
+									<span id="4" class="red-text glyphicon glyphicon-star pull-right glyph-size"></span>
+									<span id="3" class="red-text glyphicon glyphicon-star pull-right glyph-size"></span>
+									<span id="2" class="red-text glyphicon glyphicon-star pull-right glyph-size"></span>
+									<span id="1" class="red-text glyphicon glyphicon-star pull-right glyph-size"></span>
+							</div>
+						</li>
+						<h5 class="pull-left col-md-12 col-sm-12 col-xs-12 padding-left0 padding-right0"><b><?php print $row["title"];?></b></h5>
+						<p class="pull-left"><?php print $row["comments"];?></p>
+						<?php
+						}}}
+						mysqli_close($con);
+						?>
+						</ul>
+			</div>
+		</section>
+	</div>
+	
+<footer>
+	<section class="container">
+	<span class="text-right col-sm-12">Copyright &#169; 2016 Yumvino Inc. All rights reserved</span>
+	</section>
+</footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+
+<!-- tab-to-accordian js file-->
+<script type="text/javascript" src="js/responsive-tabs.js"></script>
+
+<!-- <script>$('#myTab').tabCollapse();</script> -->
+
+<script type="text/javascript">
+  (function($) {
+      fakewaffle.responsiveTabs(['xs']);
+  })(jQuery);
+</script>
+
+</body>
+</html>

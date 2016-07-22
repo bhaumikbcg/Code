@@ -1,0 +1,126 @@
+
+<head>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/handlebars-v3.0.3.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="AnimalsData.js"></script>
+<script src="assignment.js"></script>
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="assignment.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button 
+                    type="button" 
+                    class="navbar-toggle collapsed" 
+                    data-toggle="collapse" 
+                    data-target="#main_navbar" 
+                    aria-expanded="false">menu</button>
+            </div>
+            <div class="collapse navbar-collapse" id="main_navbar">
+                <ul class="nav navbar-nav">
+                    <li id="nav-home"><a href="#" class="goto-home">Home</a></li>
+                    <li id="nav-about"><a href="#" class="goto-about">About</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="page-header">
+            <a href="#" class="goto-home">
+                <h1>
+                Animal-o-pedia<br/>
+                <small>Your go-to website for information on animals</small>
+                </h1>
+            </a>
+        </div>
+
+       
+        <ol class="breadcrumb"> 
+        </ol>
+        <div id="content" class="container-fluid"></div>
+
+    </div>
+    <script id="home-template" type="text/x-handlebars-template">
+
+        <div class="row">
+            <h3>All categories</h3>
+            {{#each category}}
+            <div class="col-xs-6 col-md-3 col-lg-2">
+                <a href="#" class="goto-category" data-id="{{@index}}">
+                    <h4>{{name}}</h4>
+                    <img class="photo-thumb" src="{{animals.1.image1}}"/>
+                </a>
+            </div>
+            {{/each}}
+        </div>
+
+    </script>
+    <script id="category-template" type="text/x-handlebars-template">
+
+        <div class="row">
+            <h3>{{name}}</h3>
+            {{#each animals}}
+            <div class="col-xs-6 col-md-3 col-lg-2">
+                <a href="#" class="goto-animal" data-id="{{@index}}">
+                    <h4>{{name}}</h4>
+                    <img class="photo-thumb" src="{{image1}}"/>
+                </a>
+            </div>
+            {{/each}}
+        </div>
+
+    </script>
+    <script id="animal-template" type="text/x-handlebars-template">
+
+        <div class="row">
+            <h3>{{name}}</h3>
+            <p>{{description}}</p>
+            <h4>Images:</h4>
+            <div class="col-xs-12 col-md-6">
+                <a href="#" class="view-photo" data-src="{{image1}}">
+                    <img class="photo" src="{{image1}}"/>
+                </a>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <a href="#" class="view-photo" data-src="{{image2}}">
+                    <img class="photo" src="{{image2}}"/>
+                </a>
+            </div>
+        </div>
+        <div id="image-modal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img id="modal-img" class="photo"/> <!--src will be set from code-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="about-template" type="text/x-handlebars-template">
+
+        <div class="row">
+            <h3>About the site</h3>
+            {{#each paragraphs}}
+            <p>{{text}}</p>
+            {{/each}}
+        </div>
+
+    </script>
+    <script id="breadcrumb-template" type="text/x-handlebars-template">
+
+        <li><a href="#" class="{{class}}">{{name}}</a></li>
+
+    </script>
+</body>

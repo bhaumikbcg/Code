@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="lesson1/compileOrRunTime"/>
+	<classpathentry kind="src" path="lesson1/compileOrRunTime2"/>
+	<classpathentry kind="src" path="lesson1/errors"/>
+	<classpathentry kind="src" path="lesson1/hello"/>
+	<classpathentry kind="src" path="lesson1/homework0"/>
+	<classpathentry kind="src" path="lesson1/printAndPrintln"/>
+	<classpathentry kind="src" path="lesson1/testprog"/>
+	<classpathentry kind="src" path="lesson1/textAndNumbers"/>
+	<classpathentry kind="src" path="lesson1/twoLineHello"/>
+	<classpathentry kind="src" path="lesson2/color"/>
+	<classpathentry kind="src" path="lesson2/copyingRectangles"/>
+	<classpathentry kind="src" path="lesson2/crate"/>
+	<classpathentry kind="src" path="lesson2/crate2"/>
+	<classpathentry kind="src" path="lesson2/days"/>
+	<classpathentry kind="src" path="lesson2/days2"/>
+	<classpathentry kind="src" path="lesson2/growtester"/>
+	<classpathentry kind="src" path="lesson2/lesson2/movetester"/>
+	<classpathentry kind="src" path="lesson2/pictures"/>
+	<classpathentry kind="src" path="lesson2/pictures2"/>
+	<classpathentry kind="src" path="lesson2/rectangles"/>
+	<classpathentry kind="src" path="lesson2/strings"/>
+	<classpathentry kind="src" path="lesson2/touchingRectangles"/>
+	<classpathentry kind="src" path="MSIS2601 Lab/src"/>
+	<classpathentry kind="src" path="Practise/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="MSIS2601 Lab/bin"/>
+</classpath>

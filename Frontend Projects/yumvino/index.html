@@ -1,0 +1,461 @@
+<?php
+session_start();
+?>
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Yumvino</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+	
+</head>
+
+<body class="inner-page">
+	<header class="nav-head-main">
+		<div class="red-bar text-right">
+			<section class="container">
+				<span class="login margin-right20"><a href="#" data-toggle="modal" data-target="#myModal">Login</a> | <a href="#" data-toggle="modal" data-target="#myModal2">Signin</a></span>
+				<div class="btn-group margin-left20">
+					<button class="btn btn-primary btn-xs browse-button" type="button" data-toggle="modal" data-target="#myModal3"><span class="glyphicon glyphicon-search"></span>
+					Browse
+					</button>	
+				</div>
+			</section>
+		</div>
+		
+		<div id="myModal3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+			<div class="modal-dialog modal-pos">
+				<div class="modal-content abs">
+
+					
+					<div class="modal-body">
+						<form action="form">
+							<div class="form-group">
+								<label for="exampleInputName">Varietals</label>
+									<select class="form-control">
+										<option>Cabernet Sauvignon</option>
+										<option>Chardonnay</option>
+										<option>Merlot</option>
+									</select>
+								
+							</div>
+							
+							<div class="form-group">
+								<label for="exampleInputEmail1">Price</label>
+								<select class="form-control">
+									<option>$5 to $50</option>
+									<option>$51 to $100</option>
+									<option>$101 to $150</option>
+									<option>$151 to $200</option>
+									<option>$201 to $250</option>
+							</select>
+							</div>
+				
+							
+							<div class="form-group">
+								<label for="exampleInputPhone">Distance</label>
+								<select class="form-control">
+									<option>0miles to 10miles</option>
+									<option>11miles to 20miles</option>
+									<option>21miles to 30miles</option>
+									<option>31miles to 40miles</option>
+									<option>41miles to 50miles</option>
+									<option>51miles and more</option>
+								</select>
+							</div>
+							
+							<div class="form-group">
+								<ul class="list-inline">
+								<li class="deals"><label for="exampleInputPhone">Deal</label></li>
+									
+									<li><div class="radio">
+										<label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="yes">Yes</label>
+									</div></li>
+									<li><div class="radio">
+										<label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">No</label>
+									</div></li>
+								</ul>
+							</div>
+							
+							<div class="form-group">
+								<ul class="list-inline">
+								<li class="deals"><label for="exampleInputPhone">Wine</label></li>
+									
+									<li><div class="radio">
+										<label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">Yes</label>
+									</div></li>
+									<li><div class="radio">
+										<label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">No</label>
+									</div></li>
+								</ul>
+							</div>
+							
+							<div class="form-group">
+							<label class="pull-left margin-right20" for="">Size</label>
+							<div class="btn-group size-button">
+								<button type="button" class="btn btn-default">small</button>
+								<button type="button" class="btn btn-default">medium</button>
+								<button type="button" class="btn btn-default">large</button>
+							</div>
+							</div>
+
+						</form>
+					</div>
+					<div class="modal-footer no-border padding-top0">
+						<a class="btn-default btn pull-right" href="routes2.html" style="background-color:#B81C33; color:white;">Search</a>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		
+		<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+			<div class="modal-dialog modal-in-center">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+						<h4 class="modal-title" id="myModalLabel">Login</h4>
+					</div>
+					<div class="modal-body">
+						<form role="form" method="post" action="">
+							<div class="form-group">
+								<label for="exampleInputEmail1">Email</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">Password</label>
+								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+							</div>
+							<div class="form-group col-md-5 col-sm-5">
+								<a href="#" class="help-block">Forgot Password?</a>
+							</div>
+							<div class="checkbox col-md-6 col-sm-6">
+								<label>
+									<input type="checkbox"> Remember Me
+								</label>
+							</div>
+							<div class="form-group" style="display:none">
+								<label for="exampleInputPhone">Hidden</label>
+								<input type="password" class="form-control" id="exampleInputPhone" value="login" name="hidden" placeholder="Password">
+							</div>
+							<div class="modal-footer no-border padding-top0">
+						<button type="submit" class="btn btn-default">Submit</button>
+					</div>
+						</form>
+					</div>
+					
+
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		
+		<div id="myModal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+			<div class="modal-dialog modal-in-center">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+						<h4 class="modal-title" id="myModalLabel">Sign In</h4>
+					</div>
+					<?php
+if($_POST){
+$hidden = $_POST["hidden"];
+if($hidden == "signup"){
+	$name = $_POST["name"];
+$email = $_POST["email"];
+$password = $_POST["password"];
+$con = mysqli_connect("mysql11.000webhost.com","a9308444_bhaumik","5248ebdh","a9308444_first");
+$sql = "INSERT INTO signin (Name, Email, Password)
+		VALUES('$name','$email','$password')";
+$result = mysqli_query($con, $sql);}
+else{
+$con = mysqli_connect("mysql11.000webhost.com","a9308444_bhaumik","5248ebdh","a9308444_first");
+					$email = $_POST["email"];
+					$password = $_POST["password"];
+					$sql = "SELECT password from signin
+					where email = $email";
+					$result = mysqli_query($con, $sql);
+					if($password == "harry"){
+						//window.location.assign('profile.html');
+						$_SESSION["username"] = $email;
+						header("Location: profile.html");
+					}
+					else{
+						//window.location.assign('index.html');
+						header("Location: index.html");
+					}
+}
+mysqli_close($con);
+}
+?>
+					<div class="modal-body">
+						<form role="form" action="index.html" method="post">
+							<div class="form-group">
+								<label for="exampleInputName">Name</label>
+								<input type="text" class="form-control" id="exampleInputName" name="name" placeholder="Enter Name" required>
+							</div>
+							<div class="form-group">
+								<label for="exampleInputEmail1">Email Address</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter Email" required>
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPhone">Password</label>
+								<input type="password" class="form-control" id="exampleInputPhone" name="password" placeholder="Password" required>
+							</div>
+							<div class="form-group" style="display:none">
+								<label for="exampleInputPhone">Hidden</label>
+								<input type="password" class="form-control" id="exampleInputPhone" value="signup" name="hidden" placeholder="Password">
+							</div>
+							<input type="submit" class="btn btn-default">
+						</form>
+					</div>
+					<!--<div class="modal-footer no-border padding-top0">
+						<button type="submit" class="btn btn-default">Submit</button>
+					</div>-->
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		
+	<nav class="top-navmenu navbar navbar-default col-md-12 logo_nav col-sm-12" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="toggle-button navbar-toggle nav_button collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar white"></span>
+            <span class="icon-bar white"></span>
+            <span class="icon-bar white"></span>
+          </button>
+          <div class="logo-holder col-md-12 col-lg-12 col-sm-12"><a class="navbar-brand" href="#" style="padding-top:0;">
+	<img src="imgs/yumvino-logo-mob.png" alt="yumvino logo" /></a>
+	</div>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: auto;">
+        <ul class="nav-head nav navbar-nav navbar-right menu-to-right">
+            <li class="border-menu"><a href="review.html"><img src="imgs/review-icon.png" alt="review-icon" /><span class="menu-name-to-right">Review</span></a></li>
+			<li class="border-menu"><a href="profile.html"><img src="imgs/profile-icon.png" alt="profile-icon" /><span class="menu-name-to-right">Profile</span></a></li>
+			<li class="border-menu"><a href="maps.html"><img src="imgs/maps-icon.png" alt="maps-icon" /><span class="menu-name-to-right">Maps</span></a></li>
+			<li class="border-menu"><a href="deals.html"><img src="imgs/deals-icon.png" alt="deals-icon" /><span class="menu-name-to-right">Deals</span></a></li>
+			<li class="border-menu"><a href="routes1.html"><img src="imgs/routes-icon.png" alt="routes-icon" /><span class="menu-name-to-right">Routes</span></a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+	
+	<div class="red-border">
+	</div>
+		
+		<section class="container">
+		<form class="col-md-12 col-xs-12 col-sm-12 search" role="form">
+			<div class="search-bkgd input-group col-xs-12 col-sm-12 col-md-6 md-lg-5 pull-right">
+				<div class="col-lg-10 col-sm-10 pull-right">
+        <div class="input-group">
+          <input type="text" class="form-control">
+          <span class="input-group-btn">
+            <button class="main-search-btn btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+          </span>
+        </div><!-- /input-group -->
+      </div>
+	  
+	  <div class="btn-group col-md-12 col-xs-12 col-sm-12 visible-xs">
+				<button class="filter-drop btn btn-default btn-xs dropdown-toggle pull-right" type="button" data-toggle="dropdown">
+				FILTER BY <span class="caret"></span>
+				</button>
+				
+				<ul class="dropdown-menu pull-right" role="menu">
+					<li><a href="#">Location</a></li>
+					<li><a href="#">Taste</a></li>
+					<li><a href="#">Cost</a></li>
+					<li><a href="#">+ More Filters</a></li>
+				</ul>
+			</div>
+				<ul class="filterby pull-right hidden-xs">
+				<li>FILTER BY</li>
+				<li><a href="#">Location</a></li>
+				<li><a href="#">Taste</a></li>
+				<li><a href="#">Cost</a></li>
+				<li><a href="#">+ More Filters</a></li>
+			</ul>
+			</div>
+		</form>		
+			
+	</section>
+	</header>
+	
+	
+	<div class="main-container">
+		<section class="container">
+			<div class="col-md-12 col-xs-12 col-sm-12 pull-left padding-left0 padding-right0">
+				<h3 class="blue text-center">Not sure where to go?</h3>
+				<p class="blue text-center">Here are some popular spots to check out</p>
+					<div class="col-md-12 col-xs-12 col-sm-12 margin-bottom10 padding-right0 padding-left0">
+						
+						<ul id="flexiselDemo1"> 
+							<li class="margin-top10"><div class="img-circle"><img data-src="holder.js/140x140" class=" circle-img-back img-circle circle-img-main " alt="180x180" src="imgs/napa.jpg"></div><h4 class="red-text margin-top0">Foxen</h4></li>
+							<li class="margin-top10"><div class="img-circle"><img data-src="holder.js/140x140" class="img-circle circle-img-main circle-img-back" alt="180x180" src="imgs/sonoma.jpg"></div><h4 class="red-text margin-top0">Sonoma</h4></li>    
+							<li class="margin-top10"><div class="img-circle"><img data-src="holder.js/140x140" class="img-circle circle-img-main circle-img-back" alt="180x180" src="imgs/foxen.jpg"></div><h4 class="red-text margin-top0"><a class="red-text" href="page-2.html">Napa</a></h4></li>     
+							<li class="margin-top10"><div class="img-circle"><img data-src="holder.js/140x140" class="img-circle circle-img-main circle-img-back" alt="180x180" src="imgs/qupe.jpg"></div><h4 class="red-text margin-top0">Qupe</h4></li>
+						</ul>	
+						
+							
+					</div>
+					<div class="clearout"></div>
+				<div class="col-md-9 col-xs-12 col-sm-9 pull-left margin-top10">
+				<ul class="no-list padding-left0">
+					<h4 class="margin-bottom10 blue">Featured Articles</h4>
+					<li class="margin-top10"><h5><b>Concannon Vineyards</b></h5></li>
+					<li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... <a href="">View more>></a></p></li>
+					<li class="hidden-xs"><h5 class="margin-top10"><b>Concannon Vineyards</b></h5></li>
+					<li class="hidden-xs"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... <a href="">View more>></a></p></li>
+					<li class="hidden-xs"><h5 class="margin-top10"><b>Concannon Vineyards</b></h5></li>
+					<li class="hidden-xs"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... <a href="">View more>></a></p></li>
+					<li class="hidden-xs"><h5 class="margin-top10"><b>Concannon Vineyards</b></h5></li>
+					<li class="hidden-xs"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... <a href="">View more>></a></p></li>
+					<li class="hidden-xs"><h5 class="margin-top10"><b>Concannon Vineyards</b></h5></li>
+					<li class="hidden-xs"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... <a href="">View more>></a></p></li>
+					<li class="text-right"><a href="">More articles>></a></li>
+				</ul>
+				<div class="margin-top10">
+				<div class="col-md-6 col-sm-6 margin-top10 search hidden-xs pull-left padding-left0">
+					<h4 class="blue-text text-center">Search</h4>
+					<p class="text-center">Search for the perfect winery for you. Yumvino can search as general or specific as you want, ultimately getting you the perfect experience.</p>
+					<p class="text-center hidden-xs"><a href="search.html">Start searching</a></p>
+				</div>
+				<div class="col-md-6 col-sm-6 margin-top10 padding-right0 pull-right hidden-xs">
+					<h4 class="blue-text text-center">Review</h4>
+					<p class="text-center">Search for the perfect winery for you. Yumvino can search as general or specific as you want, ultimately getting you the perfect experience.</p>
+					<p class="text-center hidden-xs"><a href="review.html">Write a review</a></p>
+				</div>
+				</div>
+			</div>
+				
+				<div class="col-md-3 col-xs-12 col-sm-3 pull-left padding-right0 padding-left0">
+					<div class="col-md-12 col-xs-12 col-sm-12 pull-left poll margin-bottom10">
+						<h4 class="blue-text pull-left">Poll of the Week</h4>
+						<h5 class="pull-left">What was the most recent California Red wine you drank<h5>
+						<div class="bs-example col-md-12 col-xs-12 col-sm-12 pull-left padding-left0 padding-right0">
+							<form role="form">
+								<br>
+								<div class="radio col-md-12 col-xs-8 col-sm-12">
+									<label>
+									<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+									Cabernet Sauignon
+									</label>
+								</div>
+								<div class="radio col-md-12 col-xs-4 col-sm-12">
+								<label>
+								<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+									Zinfandel
+								</label>
+								</div>
+								<div class="radio col-md-12 col-xs-8 col-sm-12">
+								<label>
+								<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+									Pinot Noir
+								</label>
+								</div>
+								<div class="radio col-md-12 col-xs-4 col-sm-12">
+								<label>
+								<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+									Merlot
+								</label>
+								</div>
+							</form>
+						</div>
+						<span class="margin-bottom10 pull-right"><button class="red-btn btn pull-left">Vote</button></span>
+					</div>
+					<div class="col-md-12 col-xs-12 col-sm-12 pull-left padding-left0 download margin-top10">
+						<img class="col-md-4 col-sm-4 hidden-xs" src="imgs/testing-guide.png">
+						<span class="download red-text col-md-8 col-sm-8 padding-left0 col-xs-8">Download yumvino wine testing guide</span>
+						<span class="glyphicon glyphicon-save col-md-12 col-xs-4 col-sm-12 margin-top10"></span>
+					</div>
+					
+					<div class="col-md-12 col-xs-12 col-sm-12 subscribe margin-top10 padding-left0 padding-right0">
+						<h4 class="text-center col-md-12 col-xs-6 col-sm-12">SUBSCRIBE TODAY</h4>
+						<p class="text-center col-md-12 col-xs-6 col-sm-12">and start recieving wines</br>for a month</p>
+					</div>
+					<div class="col-md-12 col-sm-12 hidden-xs margin-top10 padding-left0 padding-right0">
+					<div class="col-md-8 col-sm-8 hidden-xs margin-top10 padding-left0 padding-right0">
+					<img class="phone" src="imgs/iphone-yumvino-onthego.png">
+					</div>
+					<div class="col-md-4 col-sm-4 hidden-xs margin-top10 padding-left0 padding-right0">
+					<a href="#"><img class="appstore pull-right" src="imgs/appstore-logo.png"></a>
+					<a href="#"><img class="google margin-top10 pull-right" src="imgs/googleplay-logo.png"></a>
+					</div>
+					
+					</div>
+				
+				</div>
+			</div>
+			
+			
+		</section>
+	</div>
+
+	<footer>
+	<section class="container">
+		<div class="col-md-6 col-xs-12 col-sm-6 pull-right margin-bottom10">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Enter your email to subscribe a news letter">
+          <span class="input-group-btn">
+            <button class="main-search-btn btn btn-default" type="button">subscribe</button>
+          </span>
+        </div><!-- /input-group -->
+		</div>
+		<div class="col-md-6 col-xs-6 col-sm-6 margin-bottom10 padding-right0">
+			<ul class="list-inline">
+				<li><a href="#"><img src="imgs/facebook.png"></a></li>
+				<li><a href="#"><img src="imgs/twitter.png"></a></li>
+				<li><a href="#"><img src="imgs/instagram.png"></a></li>
+			</ul>
+		</div>
+		<div class="col-md-12 col-sm-12 col-xs-6 margin-tb10 padding-left0 padding-right0 ">
+		<ul class="list-inline foot-nav">
+			<li><a class="margin-lr10" href="aboutus.html">About Us</a></li>
+			<li class="hidden-xs"><a class="margin-lr10">|</a></li>
+			<li><a class="margin-lr10" href="contactus.html">Contact Us</a></li>
+			<li class="hidden-xs"><a class="margin-lr10">|</a></li>
+			<li><a class="margin-lr10" href="privacypolicy.html">Privacy Policy</a></li>
+			<li class="hidden-xs"><a class="margin-lr10">|</a></li>
+			<li><a class="margin-lr10" href="t&c.html">Terms & Conditions</a></li>
+		</ul>
+	</div>
+	<h6 class="text-right col-xs-12 col-md-12 col-sm-12">Copyright &#169; 2016 Yumvino Inc. All rights reserved</h6>
+	</section>
+</footer>
+
+ <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+	<script type="text/javascript">
+
+$(window).load(function() {
+    $("#flexiselDemo1").flexisel({
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+            portrait: { 
+                changePoint:480,
+                visibleItems: 1
+            }, 
+            landscape: { 
+                changePoint:640,
+                visibleItems: 1
+            },
+            tablet: { 
+                changePoint:768,
+                visibleItems: 3
+            }
+        }
+    });
+});
+</script>
+	
+
+</body>
+</html>

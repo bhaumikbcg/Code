@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>yumvino-desk-searchresult</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+	
+</head>
+
+<body class="inner-page">
+	<header class="nav-head-bkgd">
+		<div class="red-bar text-right">
+		<section class="container">
+			<span class="login"><a href="#" data-toggle="modal" data-target="#myModal">Login</a> | <a href="#" data-toggle="modal" data-target="#myModal2">Signin</a></span>
+			<div class="btn-group margin-left20">
+					<button class="btn btn-primary btn-xs browse-button" type="button" data-toggle="modal" data-target="#myModal3"><span class="glyphicon glyphicon-search"></span>
+					Browse
+					</button>	
+			</div>
+		</section>
+		</div>
+		
+		<div id="myModal3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+			<div class="modal-dialog modal-pos">
+				<div class="modal-content abs">
+
+					
+					<div class="modal-body">
+						<form action="form">
+							<div class="form-group">
+								<label for="exampleInputName">Varietals</label>
+									<select class="form-control">
+										<option>Cabernet Sauvignon</option>
+										<option>Chardonnay</option>
+										<option>Merlot</option>
+									</select>
+								
+							</div>
+							
+							<div class="form-group">
+								<label for="exampleInputEmail1">Price</label>
+								<select class="form-control">
+									<option>$5 to $50</option>
+									<option>$51 to $100</option>
+									<option>$101 to $150</option>
+									<option>$151 to $200</option>
+									<option>$201 to $250</option>
+							</select>
+							</div>
+				
+							
+							<div class="form-group">
+								<label for="exampleInputPhone">Distance</label>
+								<select class="form-control">
+									<option>0miles to 10miles</option>
+									<option>11miles to 20miles</option>
+									<option>21miles to 30miles</option>
+									<option>31miles to 40miles</option>
+									<option>41miles to 50miles</option>
+									<option>51miles and more</option>
+								</select>
+							</div>
+							
+							<div class="form-group">
+								<ul class="list-inline">
+								<li class="deals"><label for="exampleInputPhone">Deal</label></li>
+									
+									<li><div class="radio">
+										<label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="yes">Yes</label>
+									</div></li>
+									<li><div class="radio">
+										<label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">No</label>
+									</div></li>
+								</ul>
+							</div>
+							
+							<div class="form-group">
+								<ul class="list-inline">
+								<li class="deals"><label for="exampleInputPhone">Wine</label></li>
+									
+									<li><div class="radio">
+										<label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">Yes</label>
+									</div></li>
+									<li><div class="radio">
+										<label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">No</label>
+									</div></li>
+								</ul>
+							</div>
+							
+							<div class="form-group">
+							<label class="pull-left margin-right20" for="">Size</label>
+							<div class="btn-group size-button">
+								<button type="button" class="btn btn-default">small</button>
+								<button type="button" class="btn btn-default">medium</button>
+								<button type="button" class="btn btn-default">large</button>
+							</div>
+							</div>
+
+						</form>
+					</div>
+					<div class="modal-footer no-border padding-top0">
+						<a class="btn-default btn pull-right" href="routes2.html" style="background-color:#B81C33; color:white;">Search</a>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		
+		<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+			<div class="modal-dialog modal-in-center">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+						<h4 class="modal-title" id="myModalLabel">Login</h4>
+					</div>
+					<div class="modal-body">
+						<form role="form">
+							<div class="form-group">
+								<label for="exampleInputEmail1">Username</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Username">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">Password</label>
+								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+							</div>
+							<div class="form-group col-md-5 col-sm-5">
+								<a href="#" class="help-block">Forgot Password?</a>
+							</div>
+							<div class="checkbox col-md-6 col-sm-6">
+								<label>
+									<input type="checkbox"> Remember Me
+								</label>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer no-border padding-top0">
+						<button type="submit" class="btn btn-default">Submit</button>
+					</div>
+
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		
+		<div id="myModal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+			<div class="modal-dialog modal-in-center">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+						<h4 class="modal-title" id="myModalLabel">Sign In</h4>
+					</div>
+					<div class="modal-body">
+						<form role="form">
+							<div class="form-group">
+								<label for="exampleInputName">Name</label>
+								<input type="text" class="form-control" id="exampleInputName" placeholder="Enter Name">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputEmail1">Email Address</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPhone">Phone Number</label>
+								<input type="number" class="form-control" id="exampleInputPhone" placeholder="Phone Number">
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer no-border padding-top0">
+						<button type="submit" class="btn btn-default">Submit</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		
+	<nav class="top-navmenu navbar navbar-default col-md-12 logo_nav" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="toggle-button navbar-toggle nav_button collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar white"></span>
+            <span class="icon-bar white"></span>
+            <span class="icon-bar white"></span>
+          </button>
+          <div class="logo-holder col-md-12 col-lg-12"><a class="navbar-brand" href="index.html" style="padding-top:0;">
+	<img src="imgs/yumvino-logo-mob.png" alt="yumvino logo" /></a>
+	</div>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: auto;">
+        <ul class="nav-head nav navbar-nav navbar-right menu-to-right">
+            <li class="border-menu"><a href="review.html"><img src="imgs/review-icon.png" alt="review-icon" /><span class="menu-name-to-right">Review</span></a></li>
+			<li class="border-menu"><a href="profile.html"><img src="imgs/profile-icon.png" alt="profile-icon" /><span class="menu-name-to-right">Profile</span></a></li>
+			<li class="border-menu"><a href="maps.html"><img src="imgs/maps-icon.png" alt="maps-icon" /><span class="menu-name-to-right">Maps</span></a></li>
+			<li class="border-menu"><a href="deals.html"><img src="imgs/deals-icon.png" alt="deals-icon" /><span class="menu-name-to-right">Deals</span></a></li>
+			<li class="border-menu"><a href="routes1.html"><img src="imgs/routes-icon.png" alt="routes-icon" /><span class="menu-name-to-right">Routes</span></a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+	
+	<div class="red-border">
+	</div>
+		
+		<section class="container">
+		<form class="col-md-12 col-xs-12 search" role="form">
+			<div class="search-bkgd input-group col-xs-12 col-sm-12 col-md-6 md-lg-5 pull-right">
+				<div class="col-lg-10 pull-right">
+        <div class="input-group">
+          <input type="text" class="form-control">
+          <span class="input-group-btn">
+            <button class="main-search-btn btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+          </span>
+        </div><!-- /input-group -->
+      </div>
+	  
+	  <div class="btn-group col-md-12 col-xs-12 visible-xs">
+				<button class="filter-drop btn btn-default btn-xs dropdown-toggle pull-right" type="button" data-toggle="dropdown">
+				FILTER BY <span class="caret"></span>
+				</button>
+				
+				<ul class="dropdown-menu pull-right" role="menu">
+					<li><a href="#">Location</a></li>
+					<li><a href="#">Taste</a></li>
+					<li><a href="#">Cost</a></li>
+					<li><a href="#">+ More Filters</a></li>
+				</ul>
+			</div>
+				<ul class="filterby pull-right hidden-xs">
+				<li>FILTER BY</li>
+				<li><a href="#">Location</a></li>
+				<li><a href="#">Taste</a></li>
+				<li><a href="#">Cost</a></li>
+				<li><a href="#">+ More Filters</a></li>
+			</ul>
+			</div>
+		</form>		
+			
+	</section>
+	</header>
+	<div class="main-container">
+		<section class="container">
+			
+			<div class="col-md-7 col-xs-12 pull-left">
+			<h2 class="red-text margin-bottom0">Wine&Dine Bar</h2>
+			<h4 class="red-text margin-top0">(Napa, US)</h4>
+			<p>King's Cross St Pancras, Napa Wineries, California</p>
+			<a href="#">wine&dine.com</a>
+			<span> | </span>
+			<a href="#">contact@wine&dine.com</a>
+			<span> | </span>
+			<a href="#">+1 20 3388 0800</a>
+			</div>
+			<div class="review-rating-block col-md-5 col-xs-12 pull-right text-right">
+			<div class="rating pull-right col-md-12 col-xs-12 margin-top10">
+				  <span id="5" class="glyphicon glyphicon-star"></span>
+				  <span id="4" class="glyphicon glyphicon-star"></span>
+				  <span id="3" class="glyphicon glyphicon-star"></span>
+				  <span id="2" class="glyphicon glyphicon-star"></span>
+				  <span id="1" class="glyphicon glyphicon-star"></span>
+				</div>
+				<span class="col-md-12 col-xs-12">
+				<ul class="resto-info pull-right">
+					<li><img src="imgs/resto-info-icon-1.png" alt="resto-info-icon-1" /></li>
+					<li><img src="imgs/resto-info-icon-2.png" alt="resto-info-icon-2" /></li>
+					<li><img src="imgs/resto-info-icon-3.png" alt="resto-info-icon-3" /></li>
+					<li><img src="imgs/resto-info-icon-4.png" alt="resto-info-icon-4" /></li>
+				</ul>
+				</span>
+				<span class="pull-right review-text col-md-12 col-xs-12 margin-tb10">
+				<a href="#">64 Reviews</a>
+				<span> | </span>
+				<a href="#">1024 Followers</a>
+				</span>
+				<span class="pull-right review-text col-md-12 col-xs-12 margin-bottom10">
+				<a href="#">Write a Review</a>
+				</span>
+			</div>
+			
+			<div class="divider pull-left"></div>
+			
+			<div class="col-md-6 col-xs-12 pull-left">
+			<span class="col-md-12 col-xs-12 pull-left"><h4 class="blue-text margin-bottom0"><strong>Cuisines</strong></h4></span>
+			<span class="col-md-12 col-xs-12 pull-left"><p>Mediterranean</p></span>
+			<span class="col-md-12 col-xs-12 pull-left"><h4 class="blue-text margin-bottom0"><strong>Dishes Recommended By Users</strong></h4></span>
+			<span class="col-md-12 col-xs-12 pull-left"><p>Bruchettas, Meditteranean Platter</p></span>
+			<span class="col-md-12 col-xs-12 pull-left"><h4 class="blue-text margin-bottom0"><strong>Opening Hours</strong></h4></span>
+			<span class="col-md-12 col-xs-12 pull-left"><p>12 Noon to 01:30 AM</p></span>
+			<span class="col-md-12 col-xs-12 pull-left">
+			<button class="red-btn btn pull-left margin-10 col-sm-3 col-xs-12">Add Review</button>
+			<button class="red-btn btn pull-left margin-10 col-sm-3 col-xs-12">Add to Fav</button>
+			<button class="red-btn btn pull-left margin-10 col-sm-4 col-xs-12">Add to Wishlist</button>
+			</span>
+			</div>
+			<div class="col-md-6 col-xs-12 pull-right">
+			
+			<div class="lightbox-holder col-md-12 col-xs-12">
+			<span class="lightbox">
+			<a href="#"><img src="imgs/london-bar-small.jpg" alt="london bar" /></a>
+			</span>
+			</div>
+			
+			</div>
+			
+			<div class="divider pull-left"></div>
+			
+			<div class="col-md-12 col-xs-12 pull-left">
+			<span class="col-md-12 col-xs-12 pull-left"><h4 class="blue-text margin-bottom0"><strong>Reviews by visitors</strong></h4></span>
+			
+			<span class="col-md-12 col-xs-12 pull-left">
+			<ul class="review-list pull-left">
+				<li class="col-md-1 hidden-xs"><img src="imgs/review-pic.png" alt="reviewer's picture" /></li>
+				<li class="col-md-11 col-md-12">
+				<p class="margin-bottom0"><strong>Mr. Linkon</strong></p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
+				<li class="col-md-1 hidden-xs"><img src="imgs/review-pic.png" alt="reviewer's picture" /></li>
+				<li class="col-md-11 col-md-12">
+				<p class="margin-bottom0"><strong>Mr. Linkon</strong></p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
+				<li class="col-md-1 hidden-xs"><img src="imgs/review-pic.png" alt="reviewer's picture" /></li>
+				<li class="col-md-11 col-md-12">
+				<p class="margin-bottom0"><strong>Mr. Linkon</strong></p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
+				<li class="col-md-1 hidden-xs"><img src="imgs/review-pic.png" alt="reviewer's picture" /></li>
+				<li class="col-md-11 col-md-12">
+				<p class="margin-bottom0"><strong>Mr. Linkon</strong></p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
+				<li class="col-md-1 hidden-xs"><img src="imgs/review-pic.png" alt="reviewer's picture" /></li>
+				<li class="col-md-11 col-md-12">
+				<p class="margin-bottom0"><strong>Mr. Linkon</strong></p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
+				<li class="col-md-1 hidden-xs"><img src="imgs/review-pic.png" alt="reviewer's picture" /></li>
+				<li class="col-md-11 col-md-12">
+				<p class="margin-bottom0"><strong>Mr. Linkon</strong></p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
+				<li class="col-md-1 hidden-xs"><img src="imgs/review-pic.png" alt="reviewer's picture" /></li>
+				<li class="col-md-11 col-md-12">
+				<p class="margin-bottom0"><strong>Mr. Linkon</strong></p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
+				<li class="col-md-1 hidden-xs"><img src="imgs/review-pic.png" alt="reviewer's picture" /></li>
+				<li class="col-md-11 col-md-12">
+				<p class="margin-bottom0"><strong>Mr. Linkon</strong></p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
+				<li class="col-md-1 hidden-xs"><img src="imgs/review-pic.png" alt="reviewer's picture" /></li>
+				<li class="col-md-11 col-md-12">
+				<p class="margin-bottom0"><strong>Mr. Linkon</strong></p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
+			</ul>
+			</span>
+			
+			</div>
+			
+			<div class="divider pull-left"></div>
+			
+		</section>
+	</div>
+
+<footer>
+	<section class="container">
+	<span class="text-right col-sm-12">Copyright &#169; 2016 Yumvino Inc. All rights reserved</span>
+	</section>
+</footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

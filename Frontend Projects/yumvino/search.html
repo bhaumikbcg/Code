@@ -1,0 +1,68 @@
+<?php
+session_start();
+?>
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Search Wines</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<?php
+$profile = $_SESSION["username"];
+//$profile = $_POST["email"];
+?>
+	<div class="holder" id="content">
+	<div class="left col-md-8 pull-left hidden-xs hidden-sm">
+	<div class="logo-holder col-md-12 col-lg-12">
+	<a href="index.html"><img src="imgs/yumvino-logo.png" alt="yumvino logo" /></a>
+	</div>
+	<div class="cap-text col-md-12 col-lg-12 text-right red-text"><h2>YOUR PLACE TO FIND THE WINERY</h2><h4>that has the wine you want</h4></div>
+	</div>
+	<div class="right col-md-4 col-xs-12 pull-right">
+	<div class="mob-logo-holder col-xs-12 col-sm-12 hidden-md hidden-lg text-center">
+	<img src="imgs/yumvino-logo-mob.png" alt="yumvino logo" />
+	</div>
+	<p class="push-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	<h2 class="red-text mragin-bottom0">Custom Search</h2>
+	<h5 class="red-text mragin-top0">Find the perfect winery for you</h5>
+	
+	<div class="search-form col-xs-12 col-sm-12 col-md-12 md-lg-12">				
+				<form action="route.html" method="post">
+				<label class="red-text col-md-12 col-xs-12 pull-left text-left" for="Varietals">Varietals</label>
+						<div class="btn-group col-md-12 col-xs-12 pull-left text-left">
+							<select class="form-control" name="variety">
+								<option>Cabernet Sauvignon</option>
+								<option>Chardonnay</option>
+							</select>
+						</div>
+						
+				<label class="red-text col-md-12 col-xs-12 pull-left text-left" for="Varietals">Price in USD</label>
+						<div class="btn-group col-md-12 col-xs-12 pull-left text-left">
+							<select class="form-control" name="price">
+								<option>400</option>
+								<option>600</option>
+							</select>
+						</div>		
+						
+				<label class="red-text col-md-12 col-xs-12 pull_left text-left" for="Varietals">Distnace in miles. Wineries within</label>
+						<div class="btn-group col-md-12 col-xs-12 pull-left text-left">
+							<select class="form-control" name="distance">
+								<option>10</option>
+								<option>20 </option>
+							</select>
+						</div>
+					<span class="btn-holder col-md-12 col-xs-12 pull-left">
+					<button class="cust-search-btn btn pull-right"><a href="route.html" style="color:white; text-decoration:none">Search</a></button>
+				</span>
+					
+				</form>
+				
+			</div>
+	</div>
+	</div>
+</body>
+</html>

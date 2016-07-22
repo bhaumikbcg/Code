@@ -1,0 +1,10 @@
+body{padding: 20px; margin: 30px;}
+header{background: url("../images/flywheel.jpg") #ffffff; padding: 20px; }
+h1{color: #ffffff;text-align: center;text-transform: uppercase;}
+nav{margin: auto; width: 100%; }
+nav a{display: inline-block; margin:0px 20px; border-radius: 5px; text-decoration: none; padding: 20px 100px; background-color: rgba(255,255,255,0.4);}
+.active{background: #ffffff;}
+.left{display: inline-block; float: left; width: 25%; background: #005600;}
+aside.left img{border: 2px solid black; display: block; width: 70%;margin: 40px auto;}
+.right{display: inline-block;float: right; width: 73%; margin: 0 5px;}
+h2{text-transform: uppercase;}

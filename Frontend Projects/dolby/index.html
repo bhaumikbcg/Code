@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>The story begins</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="hp/scene/css/style.css" media="screen"/>       
+    </head>
+    <body>
+        <div id="sky"></div>
+        <div id="sun_yellow"></div>
+        <div id="sun_red"></div>
+        <div id="clouds"></div>
+        <div id="ground"></div>
+        <div id="night"></div>
+        <div id="stars"></div>        
+        <div id="sstar"></div>
+        <div id="moon"></div>
+        <div id="title" style="padding:100px; color:white;">It would have been a boring day, but thanks to DOLBY, it's been a musical & magical day. <a href="hp/BurstingGiftBox/index.html">Click</a> here for more fun.</div>
+		<audio autoplay loop>
+    <source id="audio-channel" src="hp/scene/hedwig.mp3" type="audio/mpeg"/>
+</audio>
+        <script type="text/javascript" src="hp/scene/jquery-1.3.2.js"></script>
+        <script type="text/javascript" src="hp/scene/jquery.color.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#sun_yellow').animate({'top':'96%','opacity':0.4}, 12000,function(){
+                    $('#stars').animate({'opacity':1}, 5000,function(){
+                        $('#moon').animate({'top':'30%','opacity':1}, 20000, function(){
+                            $('#sstar').animate({'opacity':1}, 3000);
+                            $('#sstar').animate({
+                                'backgroundPosition':'0px 0px','top':'15%', 'opacity':0
+                            }, 5000,function(){
+                                $('#title').animate({'opacity':1}, 1000);
+                                $('#back').animate({'opacity':1}, 3000);
+                            });
+                        });
+                    });
+                });
+                $('#sun_red').animate({'top':'96%','opacity':0.8}, 12000);
+                $('#sky').animate({'backgroundColor':'#4F0030'}, 18000);
+                $('#clouds').animate({'backgroundPosition':'1000px 0px','opacity':0}, 30000);
+                $('#night').animate({'opacity':0.8}, 20000);
+            });
+        </script>
+		<script src="hp/scene/scripts/dolby.js"></script>
+<script src="hp/scene/scripts/feature-detection.js"></script>
+    </body>
+</html>
